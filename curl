@@ -1,30 +1,30 @@
-#curlが使えるかどうかの確認
+#curlが使えるかどうかの確認　私用PC〇
 $ curl https://api.github.com/zen
 
-#curlのレスポンス結果がJSONで帰ってくるかどうかの確認
+#curlのレスポンス結果がJSONで帰ってくるかどうかの確認　私用PC〇　
 $ curl https://api.github.com/users/defunkt
 
-#Patを使ったcurl
+#Patを使ったcurl　私用PC〇
 $ curl -i -u your_username https://api.github.com/users/<user名>
 $ curl -i -u your_username:$token https://api.github.com/users/<user名.
 
-#org内のリポジトリ一覧
+#org内のリポジトリ一覧　私用PC〇
 $ curl -i https://api.github.com/orgs/<org名>/repos
 
-#プルリクの一覧
+#プルリクの一覧　私用PC〇
 curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/<user名>/<リポジトリ名>/pulls
 
-#プルリクの状態確認
+#プルリクの状態確認　私用PC〇
 curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/<user名>/<リポジトリ名>/pulls/<プルリク番号>
 
-#プルリクの作成
+#プルリクの作成　私用PC×
 curl \
   -X POST \
   -H "Accept: application/vnd.github.v3+json" \
   https://api.github.com/repos/OWNER/REPO/pulls \
   -d '{"title":"Amazing new feature","body":"Please pull these awesome changes in!","head":"octocat:new-feature","base":"master"}'
 
-#プルリクのマージ
+#プルリクのマージ　私用PC〇
 curl \
   -X PUT \
   -H "Accept: application/vnd.github.v3+json" \
