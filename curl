@@ -1,0 +1,9 @@
+#curlが使えるかどうかの確認
+$ curl https://api.github.com/zen
+
+#curlのレスポンス結果がJSONで帰ってくるかどうかの確認
+$ curl https://api.github.com/users/defunkt
+
+#Patを使ったcurl
+$ curl -i -u your_username https://api.github.com/users/octocat
+$ curl -i -u your_username:$token https://api.github.com/users/octocat
